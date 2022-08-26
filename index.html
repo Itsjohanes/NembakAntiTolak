@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.29/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamu Mau Ga Jadi Pacar Aku</title>
+</head>
+<body>
+    <center>
+    <h2>Kamu mau ga jadi pacar aku</h2>
+    <button type="button" class="btn btn-success" onclick = "alertBagus()">MAU</button>
+    <button type="button" class="btn btn-danger" onmouseover="pindah(this)">G MAU</button>
+    </center>
+</body>
+<script>
+    function alertBagus(){
+    Swal.fire({
+  title: 'Makasih ya Sayang',
+  width: 600,
+  padding: '3em',
+  color: '#716add',
+  background: '#fff url(/images/trees.png)',
+  backdrop: `
+    rgba(0,0,123,0.4)
+    url("/images/nyan-cat.gif")
+    left top
+    no-repeat
+  `
+})
+    }
+</script>
+<script>
+    function pindah(tbl){
+        let css = tbl.style;
+        let randomTop = Math.floor((Math.random() * 75) + 10);
+        let randomLeft = Math.floor((Math.random() * 75) + 10);
+        css.position = "absolute";
+        css.top = `${randomTop}%`;
+        css.left = `${randomLeft}%`;
+    }
+</script>
+</html>
